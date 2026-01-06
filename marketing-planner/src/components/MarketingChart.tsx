@@ -43,7 +43,13 @@ export function MarketingChart({ answers }: { answers: MarketingPlanAnswers }) {
             label={{ value: 'Index (0–100)', angle: -90, position: 'insideLeft' }}
           />
           <Tooltip
-            formatter={(v: number, k: string) => [v, k[0]?.toUpperCase() + k.slice(1)]}
+            formatter={(value: unknown, name: unknown) => {
+              const label = typeof name === 'string' ? name : String(name ?? '')
+              const pretty = label ? label[0]?.toUpperCase() + label.slice(1) : ''
+              const v =
+                typeof value === 'number' || typeof value === 'string' ? value : String(value ?? '')
+              return [v, pretty]
+            }}
             labelFormatter={(label) => `Month ${label}`}
           />
           <Legend />
