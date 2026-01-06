@@ -1,0 +1,148 @@
+﻿Product Requirements Document (PRD)
+1. Overview
+Product Name (Working Title)
+Marketing Planner Web App
+Purpose
+The Marketing Planner Web App is a native web application built with React that helps users evaluate and improve a company’s marketing plan. Users input their company name and product or service through an interactive chat interface, answer guided questions about their marketing strategy, and receive:
+* A projected data visualization showing marketing success over time
+* Actionable tips to improve and execute the marketing plan more effectively
+Target Users
+* Startup founders
+* Small and medium-sized business owners
+* Marketing managers
+* Entrepreneurs exploring go-to-market strategies
+Goals
+* Collect structured marketing inputs in a conversational way
+* Display clear, data-driven projections of marketing performance
+* Provide practical, easy-to-understand marketing recommendations
+* Deliver a clean, professional, and approachable user experience
+________________
+
+
+2. Features
+2.1 Three Main Page Sections
+1. Company Overview Section
+   * Displays the company name
+   * Displays a short description of the product or service
+   * Updates dynamically based on user input from the chat
+2. Marketing Success Data Section
+   * Visual chart showing projected marketing success over time
+   * Data appears only after the user completes required marketing questions
+   * Clearly labeled axes (e.g., Time vs. Growth / Engagement / Revenue Index)
+3. Marketing Tips & Execution Section
+   * List of personalized tips to improve the marketing plan
+   * Execution guidance (channels, messaging, consistency, budget allocation)
+   * Updates based on the user’s marketing plan answers
+________________
+
+
+2.2 Interactive Chat Interface
+* Persistent chatbox located below the Company Overview section
+* Users must:
+   * Enter company name
+   * Enter product or service description
+   * Answer a series of marketing-related questions
+* Example chat flow:
+   * "What is your company name?"
+   * "What product or service do you provide?"
+   * "Who is your target audience?"
+   * "What marketing channels are you planning to use?"
+   * "What is your monthly marketing budget?"
+* Chat validates required inputs before progressing
+* Marketing data and tips unlock only after required questions are answered
+________________
+
+
+2.3 Conditional Data Rendering
+* Company Overview loads immediately after basic info is provided
+* Marketing data chart loads only after marketing plan questions are completed
+* Tips section updates dynamically based on the answers
+________________
+
+
+3. Technical Requirements
+3.1 Frontend
+* Framework: React (functional components)
+* Language: JavaScript or TypeScript
+* State Management:
+   * React Context or useState/useReducer
+* Charting Library:
+   * Chart.js, Recharts, or similar
+* Styling:
+   * CSS Modules, Styled Components, or Tailwind CSS
+3.2 Application Architecture
+* Single-page application (SPA)
+* Component-based structure:
+   * App Shell
+   * Company Overview Component
+   * Chat Component
+   * Marketing Questions Component
+   * Data Chart Component
+   * Tips & Recommendations Component
+3.3 Data Handling
+* Marketing projection logic can be:
+   * Rule-based (initial version)
+   * API-driven (future enhancement)
+* User inputs stored in local state
+* No authentication required for MVP
+3.4 Performance & Accessibility
+* Responsive design for desktop and tablet
+* Accessible color contrast and readable fonts
+* Keyboard-friendly chat input
+________________
+
+
+4. User Stories
+Core User Stories
+1. As a user, I want to enter my company name and product/service so I can see them displayed clearly on the page.
+2. As a user, I want to answer marketing questions through a chat interface so the experience feels simple and guided.
+3. As a user, I want to see a visual chart showing how successful my marketing plan could be over time.
+4. As a user, I want to receive clear tips on how to improve and execute my marketing plan.
+5. As a user, I want the data and tips to be locked until I finish answering the required questions so the results feel meaningful.
+Secondary User Stories
+6. As a user, I want the page to feel clean and professional so I trust the insights provided.
+7. As a user, I want the information to update instantly when I provide new inputs.
+________________
+
+
+5. Design Specifications
+5.1 Visual Style
+* Background Color: White-cream (off-white, warm neutral tone)
+* Typography:
+   * Clean, modern sans-serif font
+   * Clear hierarchy for headings and body text
+* Layout:
+   * Vertical flow with clear section separation
+   * Adequate whitespace for readability
+5.2 Layout Structure
+1. Header / Top Section
+   * Company name (large, bold)
+   * Product/service description (subheading)
+2. Chat Section
+   * Chat messages displayed in a conversational format
+   * User inputs aligned clearly
+   * System questions visually distinct
+3. Data Visualization Section
+   * Line or bar chart
+   * Neutral, professional color palette
+   * Simple legend and labels
+4. Tips Section
+   * Bullet points or cards
+   * Action-oriented language
+   * Clear separation between insights and execution advice
+5.3 Interaction Design
+* Smooth transitions when new sections appear
+* Disabled or hidden data sections until requirements are met
+* Clear feedback when answers are accepted
+________________
+
+
+6. Future Enhancements (Out of Scope for MVP)
+* AI-generated marketing projections
+* User accounts and saved plans
+* Exportable reports (PDF/CSV)
+* Industry-specific marketing templates
+________________
+
+
+End of Document
